@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oAq-aw-K8c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Order View Controller-->
+        <scene sceneID="eMg-W0-nWb">
+            <objects>
+                <viewController id="oAq-aw-K8c" customClass="OrderViewController" customModule="Spartacheli" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfw-yi-jbG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bSv-qF-Tme">
+                                <rect key="frame" x="0.0" y="44" width="414" height="803"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPR-QV-wP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="603"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ttl-GN-aB4" customClass="SummaryOrderView" customModule="Spartacheli" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="603" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uVU-V8-lTd"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bSv-qF-Tme" firstAttribute="top" secondItem="uVU-V8-lTd" secondAttribute="top" id="0Nv-Pi-XFA"/>
+                            <constraint firstItem="uVU-V8-lTd" firstAttribute="bottom" secondItem="bSv-qF-Tme" secondAttribute="bottom" constant="15" id="0uj-Ap-Um7"/>
+                            <constraint firstItem="bSv-qF-Tme" firstAttribute="leading" secondItem="uVU-V8-lTd" secondAttribute="leading" id="ajZ-os-7DO"/>
+                            <constraint firstItem="uVU-V8-lTd" firstAttribute="trailing" secondItem="bSv-qF-Tme" secondAttribute="trailing" id="pP8-n6-uSg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="summaryView" destination="Ttl-GN-aB4" id="I7v-cT-Qi9"/>
+                        <outlet property="tableView" destination="oPR-QV-wP9" id="3uK-AT-Mzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfK-MO-Bzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="122.54464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
